@@ -26,12 +26,13 @@
 
                         <c:forEach items = "${inv}" var = "inv">
                             <tr>
-                              <th scope="row">${inv.id}</th>
+                              <th scope="row">INV-${inv.id}</th>
                               <td>${inv.name}</td>
                               <td>${inv.description}</td>
                               <td>	&#8377;${inv.pricePerItem}</td>
                               <td>${inv.quantity}</td>
                               <td>	&#8377;${inv.totalPrice}</td>
+                              <td> <a href = "inventory/${inv.id}"><i class="fas fa-trash text-danger"></i></a> </td>
                             </tr>
                         </c:forEach>
 

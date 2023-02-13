@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.RedirectView;
@@ -37,6 +38,14 @@ public class HomeController {
         this.inventoryDao.createInventory(inventory);
         RedirectView redirectView = new RedirectView();
         redirectView.setUrl("home");
+        return redirectView;
+    }
+
+    @RequestMapping("/inventory/{id}")
+    public RedirectView deleteInventory (@PathVariable("id") Integer id){
+        this.inventoryDao.deleteInventory(id);
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl("/TheInventoryManager/home");
         return redirectView;
     }
 }
