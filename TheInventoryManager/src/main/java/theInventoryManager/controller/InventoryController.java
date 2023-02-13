@@ -41,7 +41,7 @@ public class InventoryController {
         return redirectView;
     }
 
-    @RequestMapping("/inventory/{id}")
+    @RequestMapping("/inventory/delete/{id}")
     public RedirectView deleteInventory (@PathVariable("id") Integer id){
         this.inventoryDao.deleteInventory(id);
         RedirectView redirectView = new RedirectView();
