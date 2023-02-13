@@ -14,7 +14,7 @@ import theInventoryManager.entity.Inventory;
 import java.util.List;
 
 @Controller
-public class HomeController {
+public class InventoryController {
 
     @Autowired
     private InventoryDao inventoryDao;
