@@ -38,7 +38,7 @@
         </property>
         <property name="annotatedClasses">
             <list>
-
+                <value>theInventoryManager.entity.Inventory</value>
             </list>
         </property>
     </bean>
