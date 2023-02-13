@@ -16,7 +16,7 @@ public class Inventory {
 
     private String description;
 
-    private Long pricePerProduct;
+    private Long pricePerItem;
 
     private Long quantity;
 
@@ -25,11 +25,11 @@ public class Inventory {
     public Inventory() {
     }
 
-    public Inventory(Integer id, String name, String description, Long pricePerProduct, Long quantity, Long totalPrice) {
+    public Inventory(Integer id, String name, String description, Long pricePerItem, Long quantity, Long totalPrice) {
         Id = id;
         this.name = name;
         this.description = description;
-        this.pricePerProduct = pricePerProduct;
+        this.pricePerItem = pricePerItem;
         this.quantity = quantity;
         this.totalPrice = totalPrice;
     }
@@ -40,7 +40,7 @@ public class Inventory {
                 "Id=" + Id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", pricePerProduct=" + pricePerProduct +
+                ", pricePerItem=" + pricePerItem +
                 ", quantity=" + quantity +
                 ", totalPrice=" + totalPrice +
                 '}';
@@ -70,12 +70,12 @@ public class Inventory {
         this.description = description;
     }
 
-    public Long getPricePerProduct() {
-        return pricePerProduct;
+    public Long getPricePerItem() {
+        return pricePerItem;
     }
 
-    public void setPricePerProduct(Long pricePerProduct) {
-        this.pricePerProduct = pricePerProduct;
+    public void setPricePerItem(Long pricePerItem) {
+        this.pricePerItem = pricePerItem;
     }
 
     public Long getQuantity() {
