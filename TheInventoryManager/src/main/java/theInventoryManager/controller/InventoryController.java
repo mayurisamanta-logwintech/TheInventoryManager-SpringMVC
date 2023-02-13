@@ -34,8 +34,9 @@ public class InventoryController {
 
     @RequestMapping(path = "/handle-inventory", method = RequestMethod.POST)
     public RedirectView handleInventory (@ModelAttribute Inventory inventory){
+        System.out.println(inventory);
         inventory.setTotalPrice(inventory.getPricePerItem() * inventory.getQuantity());
-        this.inventoryDao.createInventory(inventory);
+        this.inventoryDao.createOrUpdateInventory(inventory);
         RedirectView redirectView = new RedirectView();
         redirectView.setUrl("home");
         return redirectView;
@@ -47,5 +48,13 @@ public class InventoryController {
         RedirectView redirectView = new RedirectView();
         redirectView.setUrl("/TheInventoryManager/home");
         return redirectView;
+    }
+
+    @RequestMapping("/inventory/update/{id}")
+    public String updateInventory (@PathVariable("id") Integer id, Model model){
+
+        Inventory inventory = this.inventoryDao.getInventoryById(id);
+        model.addAttribute("inv", inventory);
+        return "Inventory-form-update";
     }
 }

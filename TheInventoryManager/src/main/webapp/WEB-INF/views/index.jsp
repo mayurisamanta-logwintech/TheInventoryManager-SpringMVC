@@ -32,7 +32,9 @@
                               <td>	&#8377;${inv.pricePerItem}</td>
                               <td>${inv.quantity}</td>
                               <td>	&#8377;${inv.totalPrice}</td>
-                              <td> <a href = "inventory/delete/${inv.id}"><i class="fas fa-trash text-danger"></i></a> </td>
+                              <td> <a href = "inventory/delete/${inv.id}"><i class="fas fa-trash text-danger"></i></a>
+                                   <a href = "inventory/update/${inv.id}"><i class="fas fa-pen-nib text-primary"></i></a>
+                              </td>
                             </tr>
                         </c:forEach>
 

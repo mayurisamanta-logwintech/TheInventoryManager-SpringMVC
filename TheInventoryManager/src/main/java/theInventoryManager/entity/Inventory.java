@@ -10,7 +10,7 @@ public class Inventory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id;
+    private Integer id;
 
     private String name;
 
@@ -25,8 +25,9 @@ public class Inventory {
     public Inventory() {
     }
 
+
     public Inventory(Integer id, String name, String description, Long pricePerItem, Long quantity, Long totalPrice) {
-        Id = id;
+        this.id = id;
         this.name = name;
         this.description = description;
         this.pricePerItem = pricePerItem;
@@ -37,7 +38,7 @@ public class Inventory {
     @Override
     public String toString() {
         return "Inventory{" +
-                "Id=" + Id +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", pricePerItem=" + pricePerItem +
@@ -47,11 +48,11 @@ public class Inventory {
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {

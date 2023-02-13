@@ -6,9 +6,7 @@ import java.util.List;
 
 public interface InventoryDao {
 
-    void createInventory(Inventory inventory);
-
-    void updateInventory(Inventory inventory);
+    void createOrUpdateInventory(Inventory inventory);
 
     void deleteInventory(Integer inventoryId);
 
